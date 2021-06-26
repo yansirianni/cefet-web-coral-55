@@ -123,9 +123,14 @@ article {
 
 /* EXERCÍCIO 7: o ticket */
 #ticket {
+  position: fixed;
+  top: calc(50% - 84px / 2);
+  left: -89px;
+  transition: left 200ms ease-out; 
 }
 
 #ticket:hover {
+  left: 0;
 }
 
 /* EXERCÍCIO 8: deslocamento no siri e peixe */
