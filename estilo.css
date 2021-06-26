@@ -44,22 +44,33 @@ strong {
 /* EXERCÍCIO 2: layout da página */
 #recipiente {
   /* layout da página aqui */
-  /* ... */
-  /* ... */
-  /* ... */
-  /* ... */
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 154px 646px;
+  min-height: 100vh;  
+}
+
+body{
+  margin: 0px;
 }
 
 #cabecalho-pagina {
+  grid-column: 2 / 3;
 }
 
 #lateral {
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
 }
 
 #cardapio {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
 }
 
 #rodape-pagina {
+  grid-row: 3 / 4;
+  grid-column: 2 / 3;
 }
 
 /* EXERCÍCIO 3: cabeçalho da página */
