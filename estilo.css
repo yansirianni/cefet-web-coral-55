@@ -48,10 +48,14 @@ strong {
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 154px 646px;
   min-height: 100vh;  
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
 }
 
-body{
+html, body{
   margin: 0px;
+  min-height: 100vh;
 }
 
 #cabecalho-pagina {
@@ -70,8 +74,8 @@ body{
 }
 
 #rodape-pagina {
-  grid-row: 3 / 4;
   grid-column: 2 / 3;
+  grid-row: 3 / 4;  
 }
 
 /* EXERCÍCIO 3: cabeçalho da página */
