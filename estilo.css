@@ -1,9 +1,16 @@
+@import "fonts/ravie.css";
+@import "fonts/verdana.css";
+
 /* EXERCÍCIO 1: fontes */
 /* importá-las aqui... e definir as `font-family` da turminha... */
 
+h1 {
+  font-family: "Ravie", sans-serif;
+}
 
 body {
   background-color: #fff;
+  font-family: "Verdana", sans-serif;
 }
 
 strong {
@@ -34,7 +41,6 @@ strong {
   color: #333;
 }
 
-
 /* EXERCÍCIO 2: layout da página */
 #recipiente {
   /* layout da página aqui */
@@ -45,26 +51,19 @@ strong {
 }
 
 #cabecalho-pagina {
-
 }
 
 #lateral {
-
 }
 
 #cardapio {
-
 }
 
 #rodape-pagina {
-
 }
-
-
 
 /* EXERCÍCIO 3: cabeçalho da página */
 #cabecalho-pagina {
-
 }
 
 #cabecalho-pagina h1 {
@@ -85,7 +84,6 @@ strong {
 article {
 }
 
-
 /* EXERCÍCIO 5: o rodapé */
 #rodape-pagina {
 }
@@ -94,14 +92,12 @@ article {
 #lateral {
 }
 
-
 /* EXERCÍCIO 7: o ticket */
 #ticket {
 }
 
 #ticket:hover {
 }
-
 
 /* EXERCÍCIO 8: deslocamento no siri e peixe */
 #siri {
@@ -113,10 +109,8 @@ article {
 /* EXERCÍCIO 9: bolhas - no HTML e no JS */
 /* --- */
 
-
 /* EXERCÍCIO 10: modo escuro */
 /* no início deste arquivo (depois dos @import), coloque
    as custom properties */
 /* coloque aqui a media query para sobrescrever o valor
    das custom properties para o modo escuro */
-
