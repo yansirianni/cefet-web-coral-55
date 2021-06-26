@@ -58,13 +58,18 @@ strong {
 /* EXERCÍCIO 2: layout da página */
 #recipiente {
   /* layout da página aqui */
+  min-height: 100vh;  
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;  
+
   display: grid;
   grid-template-rows: auto 1fr auto;
-  grid-template-columns: 154px 646px;
-  min-height: 100vh;  
-  margin-left: auto;
-  margin-right: auto;
-  width: 800px;
+  grid-template-columns: 154px 646px;  
+  grid-template-areas: 
+  "lateral cabeçalho"
+  "lateral cardapio"
+  "lateral rodape"
 }
 
 html, body{
@@ -73,23 +78,20 @@ html, body{
 }
 
 #cabecalho-pagina {
-  grid-column: 2 / 3;
+  grid-area: cabeçalho;
 }
 
 #lateral {
-  grid-column: 1 / 2;
-  grid-row: 1 / 4;
+  grid-area: lateral;  
 }
 
 #cardapio {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
+  grid-area: cardapio;  
   padding: 0 20px;
 }
 
 #rodape-pagina {
-  grid-column: 2 / 3;
-  grid-row: 3 / 4;  
+  grid-area: rodape;   
 }
 
 /* EXERCÍCIO 3: cabeçalho da página */
