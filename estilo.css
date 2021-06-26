@@ -1,6 +1,20 @@
 @import "fonts/ravie.css";
 @import "fonts/verdana.css";
 
+:root {
+  --cor-do-texto: #333;
+  --cor-do-titulo: #e90c0c;
+  --cor-do-fundo: #fff;
+  --cor-strong: #d027aa;
+
+  --cor-da-borda-recipiente: #d3d3d3;
+  --cor-inicio-degrade: #f6f1b2;
+  --cor-fim-degrade: #4599b2;
+
+  --cor-do-fundo-cardapio: rgba(255, 255, 255, 0.2);
+  --cor-da-borda-cardapio: #aac0ae;
+}
+
 /* EXERCÍCIO 1: fontes */
 /* importá-las aqui... e definir as `font-family` da turminha... */
 
@@ -9,36 +23,36 @@ h1 {
 }
 
 body {
-  background-color: #fff;
+  background-color: var(--cor-do-fundo);
   font-family: "Verdana", sans-serif;
 }
 
 strong {
-  color: #d027aa;
+  color: var(--cor-strong);
 }
 
 #recipiente {
-  background-image: linear-gradient(to bottom, #f6f1b2, #4599b2 80%);
-  border-left: 1px solid #d3d3d3;
-  border-right: 1px solid #d3d3d3;
+  background-image: linear-gradient(to bottom, var(--cor-inicio-degrade), var(--cor-fim-degrade) 80%);
+  border-left: 1px solid var(--cor-da-borda-recipiente);
+  border-right: 1px solid var(--cor-da-borda-recipiente);
 }
 
 #cardapio {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-top: 1px solid #aac0ae;
-  border-bottom: 1px solid #aac0ae;
-  border-left: 1px solid #aac0ae;
+  background-color: var(--cor-do-fundo-cardapio);
+  border-top: 1px solid var(--cor-da-borda-cardapio);
+  border-bottom: 1px solid var(--cor-da-borda-cardapio);
+  border-left: 1px solid var(--cor-da-borda-cardapio);
 }
 
 #cardapio h3 {
   font-size: 18px;
-  color: #333;
+  color: var(--cor-do-texto);
   margin-top: 30px;
 }
 
 #cardapio article {
   font-size: 14px;
-  color: #333;
+  color: var(--cor-do-texto);
 }
 
 /* EXERCÍCIO 2: layout da página */
@@ -86,7 +100,7 @@ html, body{
 #cabecalho-pagina h1 {
   margin: 0;
   font-size: 36px;
-  color: #e90c0c;
+  color: var(--cor-do-titulo);
   font-weight: normal;
   text-align: center;
 }
@@ -94,7 +108,7 @@ html, body{
 #cabecalho-pagina h2 {
   margin: 0;
   font-size: 24px;
-  color: #333;
+  color: var(--cor-do-texto);;
   font-weight: normal;
   text-align: right;
 }
@@ -152,3 +166,13 @@ article {
    as custom properties */
 /* coloque aqui a media query para sobrescrever o valor
    das custom properties para o modo escuro */
+
+   @media (prefers-color-scheme: dark) {
+    :root {
+      --cor-do-texto: #eee;
+      --cor-do-fundo: #000;
+
+      --cor-inicio-degrade: #043f5b;
+      --cor-fim-degrade: #0f0020;
+    }
+  }
